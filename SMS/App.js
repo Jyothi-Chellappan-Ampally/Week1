@@ -10,7 +10,7 @@ const students = [{
        studentName: "anshita", 
         studentEmail: "anshita@gmail.com", 
         studentAge: "21", 
-        studentUniqueId: '2' 
+        studentUniqueId: '2'
     }, 
     { 
         studentName: "prachin", 
