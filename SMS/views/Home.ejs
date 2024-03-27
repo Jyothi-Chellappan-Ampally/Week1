@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/styles.css">  -->
+    <style>
+    body{
+    background-color: rgb(209, 174, 241);
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: medium;
+    align-items: center;
+}
+    </style>
+</head>
+<body class="main-container">
+ 
+    <h2 class="header1">Student Management System</h2>
+    <hr>
+    <br>
+        <form class="form1" action="/" method="post">
+       <input class="input1" type="text" placeholder="student
+         Unique Id" name="studentUniqueId">
+       <input class="input1" type="text" placeholder="student Name" 
+           name="studentName">
+       <input class="input1" type="text" placeholder="student Email"
+            name="studentEmail">
+       <input class="input1" type="text" placeholder="student Age"
+            name="studentAge">
+       <button type="submit">Submit</button>
+ </form>
+ <form class="form1" action="update" method="post">
+    <input type="text" placeholder="student Unique Id"
+     name="studentUniqueId">
+    <input class="input1" type="text" placeholder="student Name" 
+        name="studentName">
+    <input class="input1" type="text" placeholder="student Email" 
+        name="studentEmail">
+    <input class="input1" type="text" placeholder="student Age" 
+        name="studentAge">
+    <button type="submit">Update</button>
+</form>
+ <table class="table1">
+    <tr class="trow">
+      <th class="thead">student Id</th>
+      <th class="thead">student Name</th>
+      <th class="thead">student Email</th>
+      <th class="thead">Age</th>
+      <th class="thead">Delete</th>
+    </tr>
+    <% data.forEach(element => { %>
+    <tr class="trow">
+      <td class="tdata"><%= element.studentUniqueId %></td>
+      <td class="tdata"><%= element.studentName %></td>
+      <td class="tdata"><%= element.studentEmail %></td>
+      <td class="tdata"><%= element.studentAge %></td>
+       <td>
+          <form class="form1" action="/delete" method="post">
+              <input class="input1" type="text" style="display: none;" 
+                 name="studentUniqueId" 
+                 value="<%= element.studentUniqueId %>">
+              <button class="button1" type="submit">Delete</button>
+            </form>
+      </td>
+    </tr>
+    <% }) %>
+</table>
+</body>
+</html>
+

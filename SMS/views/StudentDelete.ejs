@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>student Id</th>
+          <th>student Name</th>
+          <th>student Email</th>
+          <th>Age</th>
+          <th>Delete</th>
+        </tr>
+        <% data.forEach(element => { %>
+        <tr>
+          <td><%= element.studentUniqueId %></td>
+          <td><%= element.studentName %></td>
+          <td><%= element.studentEmail %></td>
+          <td><%= element.studentAge %></td>
+          <td>
+              <form action="/delete" method="post">
+                  <input type="text" style="display: none;" 
+                     name="studentUniqueId" 
+                     value="<%= element.studentUniqueId %>">
+                  <button type="submit">Delete</button>
+                </form>
+          </td>
+        </tr>
+        <% }) %>
+  </table>
+ 
+
+</body>
+</html>

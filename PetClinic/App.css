@@ -1,0 +1,55 @@
+/* Global Styles */ 
+body { 
+    font-family: Arial, sans-serif; margin: 0; padding: 0;
+ } 
+ .container { max-width: 1200px; margin: 0 auto; padding: 20px; } 
+
+ /* Header Styles */ 
+ header { background-color: #333; color: #fff; padding: 10px 0; } 
+ header h1 { text-align: center; } 
+ /* Form Styles */ 
+ form { max-width: 400px; margin: 0 auto; } 
+ form div { margin-bottom: 10px; } 
+ form label { display: block; } 
+ form input, form select { 
+    width: 100%; padding: 8px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+} 
+form button { 
+    width: 100%; 
+    padding: 10px; 
+    font-size: 18px; 
+    background-color: #4CAF50; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+ } 
+ 
+ form button:hover { 
+    background-color: #45a049; 
+} 
+/* Carousel Styles */ 
+.carousel { 
+    width: 100%; max-width: 800px; 
+    margin: 20px auto; 
+    position: relative; 
+    overflow: hidden; 
+} 
+.carousel img { 
+    width: 100%; display: block; 
+} 
+.carousel .carousel-inner { 
+    display: flex;
+     transition: transform 0.5s ease-in-out;
+     } 
+.carousel .carousel-item { width: 100%; } 
+.carousel .carousel-item img { width: 100%; }
+ /* Footer Styles */ 
+ footer { 
+    background-color: #333; color: #fff;
+    text-align: center; padding: 20px 0; 
+    }
